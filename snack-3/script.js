@@ -42,24 +42,30 @@ for (let x=0; x < teamCalcio.length; x++){
 // Stampare in html (in forma tabellare!!!) i dati relativi alle squadre evidenziando
 //  in giallo la riga corrispondente alla squadra con più falli subiti.
 
-let tableHtml = document.querySelector('.table-container');
+
 
 var falloResult=0;
 var falliSubitiPiù;
 
+for (let x=0; x<teamCalcio.length; x++){
 
-for (let i=0; i<teamCalcio.length; i++){
-
-     let {fallo}=teamCalcio[i];
+    const {fallo}=teamCalcio[x];
 
 
     if (fallo > falloResult){
-        falliSubitiPiù=teamCalcio[i];
+        falliSubitiPiù=teamCalcio[x];
         falloResult = fallo;
-    }
-    console.log("🚀 ~ file: script.js ~ line 49 ~ falliSubitiPiù;", falliSubitiPiù)
+    };
 
-    var{nome, punteggio,fallo}=teamCalcio[i];
+};
+console.log("🚀 ~ file: script.js ~ line 49 ~ falliSubitiPiù;", falliSubitiPiù)
+ 
+let tableHtml = document.querySelector('.table-container');
+
+for (let i=0; i<teamCalcio.length; i++){
+
+    const {nome, punteggio,fallo}=teamCalcio[i];
+
     tableHtml.innerHTML+=`
     <ul>
        <li>${nome}</li>
@@ -67,5 +73,7 @@ for (let i=0; i<teamCalcio.length; i++){
        <li>${fallo}</li>
     </ul>
     `
-}
+    if(teamCalcio[i]===falliSubitiPiù){
 
+    }
+}
