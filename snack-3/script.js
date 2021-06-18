@@ -14,35 +14,14 @@ console.log("🚀 ~ file: script.js ~ line 6 ~ teamCalcio", teamCalcio);
 function getRandom(min, max) {
    
     return Math.floor(Math.random() * (max - min + 1) + min);
-  }
+  };
 
 
 
 for (let x=0; x < teamCalcio.length; x++){
     teamCalcio[x].fallo = getRandom(0,40);
     teamCalcio[x].punteggio = getRandom(0,20);
-}
-
-
-// Infine usando la destrutturazione creiamo un nuovo array i cui elementi 
-// contengono solo nomi e falli subiti e stampiamo tutto in console.
-
-// let array=[{}];
-
-// for (let x=0; x <teamCalcio.length; x++){
-//     const {nome, fallo}=teamCalcio[x];
-//     array.push({
-//         nome,
-//         fallo
-//     })
-// };
-
-// console.log(array)
-
-// Stampare in html (in forma tabellare!!!) i dati relativi alle squadre evidenziando
-//  in giallo la riga corrispondente alla squadra con più falli subiti.
-
-
+};
 
 var falloResult=0;
 var falliSubitiPiù;
@@ -58,13 +37,17 @@ for (let x=0; x<teamCalcio.length; x++){
     };
 
 };
-console.log("🚀 ~ file: script.js ~ line 49 ~ falliSubitiPiù;", falliSubitiPiù)
- 
+
+console.log("🚀 ~ file: script.js ~ line 49 ~ falliSubitiPiù;", falliSubitiPiù);
+
+// Stampare in html (in forma tabellare!!! :allegria::allegria:) i dati relativi alle squadre 
+// evidenziando in giallo la riga corrispondente alla squadra con più falli subiti.
+
 let tableHtml = document.querySelector('.table-container');
 
 for (let i=0; i<teamCalcio.length; i++){
 
-    const {nome, punteggio,fallo}=teamCalcio[i];
+    let {nome, punteggio,fallo}=teamCalcio[i];
 
     tableHtml.innerHTML+=`
     <ul>
@@ -74,6 +57,6 @@ for (let i=0; i<teamCalcio.length; i++){
     </ul>
     `
     if(teamCalcio[i]===falliSubitiPiù){
-
+        document.getElementsByTagName('ul')[i+1].setAttribute('style', "background-color: yellow;")
     }
 }
