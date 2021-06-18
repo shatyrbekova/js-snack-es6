@@ -19,8 +19,8 @@ function getRandom(min, max) {
 
 
 for (let x=0; x < teamCalcio.length; x++){
-    teamCalcio[x].fallo = getRandom(0,40);
-    teamCalcio[x].punteggio = getRandom(0,20);
+    teamCalcio[x].fallo = getRandom(1,20);  
+    teamCalcio[x].punteggio = getRandom(1,30);  
 };
 
 var falloResult=0;
