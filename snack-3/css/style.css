@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.table-container ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+}
+
+.table-container ul:first-child{
+    font-weight: bold;
+}
+.table-container ul li{
+ list-style: none;
+ border: 1px black solid;
+ flex-basis: 33%;
+}
