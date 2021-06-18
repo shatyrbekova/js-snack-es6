@@ -40,7 +40,7 @@ for (let x=0; x<teamCalcio.length; x++){
 
 console.log("🚀 ~ file: script.js ~ line 49 ~ falliSubitiPiù;", falliSubitiPiù);
 
-// Stampare in html (in forma tabellare!!! :allegria::allegria:) i dati relativi alle squadre 
+// Stampare in html (in forma tabellare!!!) i dati relativi alle squadre 
 // evidenziando in giallo la riga corrispondente alla squadra con più falli subiti.
 
 let tableHtml = document.querySelector('.table-container');
