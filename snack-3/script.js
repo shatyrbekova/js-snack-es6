@@ -26,7 +26,7 @@ for (let x=0; x < teamCalcio.length; x++){
 var falloResult=0;
 var falliSubitiPiù;
 
-for (let x=0; x<teamCalcio.length; x++){
+for (let x=0; x<teamCalcio.len 
 
     const {fallo}=teamCalcio[x];
 

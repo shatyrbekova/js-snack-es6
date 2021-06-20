@@ -5,7 +5,36 @@
 //  Risolvetelo prima in versione ES5, poi commentate la versione in ES5 e fatelo in ES6. (modificato)
 
 
-var bici=[
+// var bici=[
+//     {
+//      nome: 'Tizio',
+//      peso: 10},
+
+//     {
+//      nome: 'Pippo',
+//      peso: 2,
+//     },
+
+//     {
+//         nome: 'Aldo',
+//         peso:5
+//     }
+// ];
+
+// var pesoMinore;
+// var peso =10;
+
+// for (var x=0; x< bici.length; x++){
+
+//     var thisWeight = bici[x].peso;
+//     if (thisWeight < peso){
+//         pesoMinore=bici[x];
+//         peso = thisWeight;
+//     }
+// };
+// console.log(pesoMinore);
+
+let bici=[
     {
      nome: 'Tizio',
      peso: 10},
@@ -21,34 +50,20 @@ var bici=[
     }
 ];
 
-var pesoMinore;
-var peso =10;
+let pesoMinore;
+let pesoM =10;
 
-for (var x=0; x< bici.length; x++){
+for (let x=0; x< bici.length; x++){
 
     var thisWeight = bici[x].peso;
-    if (thisWeight < peso){
+    if (thisWeight < pesoM){
         pesoMinore=bici[x];
-        peso = thisWeight;
+        pesoM = thisWeight;
     }
 };
-console.log(pesoMinore);
 
-
-// let pesoMinore;
-// let pesoM =10;
-
-// for (let x=0; x< bici.length; x++){
-
-//     var thisWeight = bici[x].peso;
-//     if (thisWeight < pesoM){
-//         pesoMinore=bici[x];
-//         peso = thisWeight;
-//     }
-// };
-
-// const {nome, peso}=pesoMinore;
-// console.log(`La bici con il peso miniore è ${nome} ${peso}`);
+const {nome, peso}=pesoMinore;
+console.log(`La bici con il peso miniore è ${nome} ${peso}`);
 
 
 
